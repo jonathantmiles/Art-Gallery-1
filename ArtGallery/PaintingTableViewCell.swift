@@ -16,7 +16,11 @@ class PaintingTableViewCell: UITableViewCell {
     private func updateViews() {
         guard let painting = painting else { return }
         paintingView.image = painting.image
-        likeButton.setTitle(<#T##title: String?##String?#>, for: <#T##UIControlState#>)
+        if painting.isLiked == true {
+            likeButton.setTitle("Unlike", for: .normal)
+        } else {
+            likeButton.setTitle("Like", for: .normal)
+        }
     }
     
     // MARK: - Properties
