@@ -24,18 +24,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaintingCell" rowHeight="250" id="7mg-bN-QY6" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PaintingCell" rowHeight="161" id="7mg-bN-QY6" customClass="PaintingTableViewCell" customModule="ArtGallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="161"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7mg-bN-QY6" id="D84-RH-ELa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LCn-Cy-3G4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evQ-pg-Kvt">
-                                                    <rect key="frame" x="0.0" y="213" width="375" height="44"/>
+                                                    <rect key="frame" x="0.0" y="121" width="375" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="DEw-0I-T7g"/>
                                                     </constraints>
@@ -47,11 +47,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="LCn-Cy-3G4" firstAttribute="leading" secondItem="D84-RH-ELa" secondAttribute="leading" id="1mg-1d-q6V"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="LCn-Cy-3G4" secondAttribute="bottom" constant="14" id="CrK-xq-lin"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LCn-Cy-3G4" secondAttribute="bottom" constant="28" id="CrK-xq-lin"/>
                                                 <constraint firstItem="LCn-Cy-3G4" firstAttribute="trailing" secondItem="evQ-pg-Kvt" secondAttribute="trailing" id="IjR-j5-p01"/>
                                                 <constraint firstItem="LCn-Cy-3G4" firstAttribute="leading" secondItem="evQ-pg-Kvt" secondAttribute="leading" id="KCT-YF-rV5"/>
                                                 <constraint firstItem="LCn-Cy-3G4" firstAttribute="top" secondItem="D84-RH-ELa" secondAttribute="top" id="b6Y-cd-ekE"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="evQ-pg-Kvt" secondAttribute="bottom" constant="-18" id="f78-iB-xlC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="evQ-pg-Kvt" secondAttribute="bottom" constant="-15" id="f78-iB-xlC"/>
                                                 <constraint firstAttribute="trailing" secondItem="LCn-Cy-3G4" secondAttribute="trailing" id="sbs-fB-v7q"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -67,6 +67,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Art Gallery" id="3oM-Ai-8UZ"/>
+                    <connections>
+                        <outlet property="tableViewPainting" destination="a6K-vN-QAq" id="TUc-8G-ID4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

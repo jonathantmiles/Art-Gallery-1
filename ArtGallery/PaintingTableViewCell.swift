@@ -8,9 +8,18 @@
 
 import UIKit
 
-class PaintingTableViewCell: UITableViewCell {
+protocol PaintingTableViewCellDelegate: class {
+    func likeButtonWasTapped(on cell: PaintingTableViewCell)
+}
 
+class PaintingTableViewCell: UITableViewCell, PaintingTableViewCellDelegate {
+
+    func likeButtonWasTapped(on cell: PaintingTableViewCell) {
+        
+    }
+    
     @IBAction func likeOrUnlikeButton(_ sender: Any) {
+        delegate?.likeButtonWasTapped(on: self)
     }
     
     private func updateViews() {
@@ -24,6 +33,8 @@ class PaintingTableViewCell: UITableViewCell {
     }
     
     // MARK: - Properties
+    
+    weak var delegate: PaintingTableViewCellDelegate?
     
     var painting: Painting? {
         didSet {
