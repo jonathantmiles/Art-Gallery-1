@@ -22,6 +22,7 @@ class PaintingTableViewCell: UITableViewCell, PaintingTableViewCellDelegate {
         delegate?.likeButtonWasTapped(on: self)
     }
     
+    
     private func updateViews() {
         guard let painting = painting else { return }
         paintingView.image = painting.image

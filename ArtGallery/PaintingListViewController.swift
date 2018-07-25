@@ -22,12 +22,12 @@ class PaintingListViewController: UIViewController, UITableViewDataSource, Paint
     // MARK: - Novel delegate conformance
     
     func likeButtonWasTapped(on cell: PaintingTableViewCell) {
-        let indexPath = tableViewPainting.indexPath(for: UITableViewCell)
+        guard let indexPath = tableViewPainting.indexPath(for: cell) else { return }
         
         let painting = paintingController.paintings[indexPath.row]
         paintingController.toggleIsLiked(for: painting)
         
-        tableViewPainting.reloadRows(at: indexPath, with: UITableViewRowAnimation.bottom)
+        tableViewPainting.reloadRows(at: [indexPath], with: UITableViewRowAnimation.bottom)
     }
     
     // MARK: - TableViewDataSource conformance
